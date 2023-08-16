@@ -5952,11 +5952,15 @@ uint64_t SSL_get_options(const SSL *s)
 
 uint64_t SSL_CTX_set_options(SSL_CTX *ctx, uint64_t op)
 {
+//printf - if our code reaches here???
+    op |= SSL_OP_ENABLE_KTLS;
     return ctx->options |= op;
 }
 
 uint64_t SSL_set_options(SSL *s, uint64_t op)
 {
+//printf - if our code reaches here???
+    op |= SSL_OP_ENABLE_KTLS;
     SSL_CONNECTION *sc;
     OSSL_PARAM options[2], *opts = options;
 
