@@ -1959,7 +1959,6 @@ int s_server_main(int argc, char *argv[])
     if (ignore_unexpected_eof)
         SSL_CTX_set_options(ctx, SSL_OP_IGNORE_UNEXPECTED_EOF);
 #ifndef OPENSSL_NO_KTLS
-    if (enable_ktls)
         SSL_CTX_set_options(ctx, SSL_OP_ENABLE_KTLS);
     if (use_zc_sendfile)
         SSL_CTX_set_options(ctx, SSL_OP_ENABLE_KTLS_TX_ZEROCOPY_SENDFILE);
